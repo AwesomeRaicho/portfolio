@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const ProjectLink = (item) => {
 
-    console.log(item) 
     const {name, lenguage, wip, description, url, img} = item
 
   return (      

@@ -1,21 +1,28 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import { Link } from 'react-router-dom';
+import {FaRegTimesCircle, FaSlidersH} from 'react-icons/fa';
 
 const Navigation = () => {
+
+    const [toggled, setToggled] = useState(false);
+
   return (
     <div className='navbar-contaioner'>
         <nav className='navbar'>
             <div className='logo'>
-                <Link className='link' to={'/'}>RICARDO ARAUJO</Link>
+                <Link className='link logo-link' to={'/'}>Ricardo Araujo</Link>
             </div>
-            <ul className='nav-list'>
+
+            <ul className={`nav-list ${toggled && 'display'}`}>
                 <li className='nav-item'>
-                    <Link className='link' to={'/'}>Home</Link>
+                    <Link className='nav-link' to={'/'}>Home</Link>
                 </li>
                 <li className='nav-item'>
-                    <Link className='link' to={'/about'}>About</Link>
+                    <Link className='nav-link' to={'/about'}>About</Link>
                 </li>
             </ul>
+
+            <button type='button' className='nav-toggler' onClick={()=>setToggled(!toggled)}>{toggled ? <FaRegTimesCircle size='30px' color='white'/>:<FaSlidersH size='30px' color='white'/>}</button>
         </nav>
     </div>
   )

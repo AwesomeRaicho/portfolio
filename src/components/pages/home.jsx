@@ -10,7 +10,6 @@ const Home = () => {
   return (
     <div className='home-container'>
         {projects.map((value, index)=>{
-
           return <ProjectLink key={index} {...value}/>
         })}
     </div>
