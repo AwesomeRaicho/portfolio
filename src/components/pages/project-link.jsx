@@ -12,7 +12,9 @@ const ProjectLink = (item) => {
                 <h2>{name}</h2>
                 <h4>{lenguage}</h4>
                 <p>{description}</p>
-                {wip && <i>Work in progress</i>  }
+                <div className='working-project'>
+                    {wip && <i >Work in progress</i>  }
+                </div>
 
             </div>
         </Link>

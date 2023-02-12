@@ -3,7 +3,7 @@
 /* CEC3D6, 9FA0B3, 3D588A, 2E3957, 161D2E */
 
 body{
-  background-color: turquoise;
+  background-color: rgb(100, 100, 100);
   padding: 0px;
   margin: 0px;
 }
@@ -71,7 +71,7 @@ body{
 
 .home-container{
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
 }
@@ -96,10 +96,25 @@ body{
   width: 300px;
   padding: 10px;
   background-color: white;
+  height: 100%;
+  position: relative;
 }
 
 .project-img{
   width: 100%;
+}
+
+.working-project{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  align-items: end;
+  justify-content: center;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  color: red;
 }
 
 
