@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import { Link } from 'react-router-dom';
-import {FaRegTimesCircle, FaSlidersH} from 'react-icons/fa';
+import {FaRegTimesCircle, FaBars} from 'react-icons/fa';
 
 const Navigation = () => {
 
@@ -10,7 +10,7 @@ const Navigation = () => {
     <div className='navbar-contaioner'>
         <nav className='navbar'>
             <div className='logo'>
-                <Link className='link logo-link' to={'/'}>Ricardo Araujo</Link>
+                <Link className='link logo-link' to={'/'}>RA</Link>
             </div>
 
             <ul className={`nav-list ${toggled && 'display'}`}>
@@ -22,7 +22,7 @@ const Navigation = () => {
                 </li>
             </ul>
 
-            <button type='button' className='nav-toggler' onClick={()=>setToggled(!toggled)}>{toggled ? <FaRegTimesCircle size='30px' color='white'/>:<FaSlidersH size='30px' color='white'/>}</button>
+            <button type='button' className='nav-toggler' onClick={()=>setToggled(!toggled)}>{toggled ? <FaRegTimesCircle size='30px' color='white'/>:<FaBars size='30px' color='white'/>}</button>
         </nav>
     </div>
   )

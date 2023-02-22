@@ -1,9 +1,12 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
 /* CEC3D6, 9FA0B3, 3D588A, 2E3957, 161D2E */
+/*font-family: 'Quicksand', sans-serif;*/
 
 body{
-  background-color: rgb(100, 100, 100);
+  background-color: #000000;
   padding: 0px;
   margin: 0px;
 }
@@ -34,7 +37,8 @@ body{
 .logo{
   margin-left: 0px;
   font-size: 30px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 900;
   color: white;
 }
 
@@ -70,10 +74,6 @@ body{
 /* ===== PAGES ===== */
 
 .home-container{
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
 }
 .about-container{
   display: flex;
