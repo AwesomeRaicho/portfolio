@@ -8,8 +8,8 @@ const HomeHero = () => {
       <div className='hero-back'>
         <div className="hero-container">
             <div className='hero-info'>
-                <h1 className='hero-name'>Ricardo <br /> &ensp;&ensp; Araujo</h1>
-                <p className='hero-message'>Hello, I am a web developer.</p>
+                <h1 className='hero-name'>Ricardo Araujo</h1>
+                <p className='hero-message'>Hello there, I am a web developer.</p>
                 <div className='hero-btns'>
                   <button className='hero-btn'>Portfolio</button><button className='hero-btn'>About Me</button>
                 </div>
@@ -29,7 +29,7 @@ const HomeHero = () => {
 
 const Wrapper = styled.section`
 .hero-back{
-  overflow: hidden;
+  position: relative;
 }
 
 .hero-back::before{
@@ -44,8 +44,6 @@ const Wrapper = styled.section`
   z-index: -2;
   background-position: center;
 }
-
-
 
 .hero-container{
   display: flex;
@@ -66,19 +64,18 @@ const Wrapper = styled.section`
   justify-content: center;
 }
 
-
-
-
 .hero-name{
   margin: 0%;
-  font-size: 80px;
+  font-size: 70px;
   color: white;
-  padding-left: 50px;
   font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
 .hero-message{
-  padding-left: 20%;
+  text-align: center;
   margin: 0px;
   color: white;
   font-family: 'Quicksand', sans-serif;
@@ -87,6 +84,7 @@ const Wrapper = styled.section`
 
 .hero-btns{
   text-align: center;
+
 }
 
 
@@ -120,6 +118,7 @@ const Wrapper = styled.section`
 .portrait-container{
   position: relative;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .portrait-container::before{
@@ -156,6 +155,69 @@ const Wrapper = styled.section`
 }
 
 
+@media screen and (max-width: 950px){ //////////////// 950px
+  .hero-name{
+  margin: 0%;
+  font-size: 60px;
+  color: white;
+  padding-left: 0%;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.hero-message{
+  padding-left: 0%;
+  margin: 0px;
+  text-align: center;
+}
+
+.hero-btns{
+  text-align: center;
+}
+.hero-portrait{
+  width: 200px;
+  height: 200px;
+  border: 10px solid white;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 4px 4px 8px black;
+  z-index: 1;
+}
+
+
+}
+
+@media screen and (max-width: 650px){//////////////// 650px
+  .hero-container{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-name{
+    margin: 0%;
+    padding: 0%;
+
+  }
+
+  .hero-message{
+
+  }
+
+  .hero-info{
+    margin: 0%;
+    padding: 0%;
+  }
+  .hero-images{
+    margin: 0%;
+    padding: 0%;
+    margin-top: 50px;
+    display: none;
+  }
+
+  .hero-btns{
+    margin-top: 30px;
+  }
+}
 `
 
 
