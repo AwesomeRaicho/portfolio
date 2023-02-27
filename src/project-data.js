@@ -5,7 +5,9 @@ const Projects = [
         wip: true,
         description: 'Collection of hiragana and katakana memory games',
         img: 'images/memory-game.PNG',
-        url: 'https://hiragana-katakana-games.netlify.app/'
+        url: 'https://hiragana-katakana-games.netlify.app/',
+        featured: true,
+        id: 1
     },
     {
         name: 'Pokemon API App',
@@ -13,7 +15,9 @@ const Projects = [
         wip: true,
         description: 'General pokemon information',
         img: 'images/pokemon-api-screen.PNG',
-        url: 'https://awesomeraicho-pokemon-app.netlify.app/'
+        url: 'https://awesomeraicho-pokemon-app.netlify.app/',
+        featured: true,
+        id: 2
     },
 ]
 

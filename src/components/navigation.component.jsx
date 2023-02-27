@@ -62,7 +62,7 @@ const Wrapper = styled.section`
 }
 
 .logo{
-  margin-left: 0px;
+  margin-left: 30px;
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
   font-weight: 900;
