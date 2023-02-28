@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <Wrapper>
-        <div className='navbar-contaioner'>
+        <div className='navbar-container'>
             <nav className='navbar'>
                 <div className='logo'>
                     <Link className='link logo-link' to={'/'}>RA</Link>
@@ -35,6 +35,8 @@ const Navigation = () => {
 const Wrapper = styled.section`
 .navbar-container{
   background-color: black;
+  z-index: 5;
+  min-height: 45px;
 }
 
 .navbar{
@@ -48,6 +50,8 @@ const Wrapper = styled.section`
     margin: 0%;
     padding: 0%;
     height: 7vh;
+    min-height: 45px;
+
 }
 
 .nav-list{

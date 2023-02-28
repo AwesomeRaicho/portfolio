@@ -5,13 +5,12 @@ import styled from 'styled-components';
 
 const ProjectLink = (props) => {
 
-    const {name, lenguage, wip, description, url, img} = props;
-
+    const {name, lenguage, wip, description, imgs, id} = props;
   return (  
     <Wrapper className='link-container'>
-        <Link to={url} target={'_blank'} className='link'>
+        <Link to={`/projects/${id}`} className='link'>
             <div className='project-container'>
-                <img src={img} alt={name} className='project-img'/>
+                <img src={imgs[0]} alt={name} className='project-img'/>
                 <h2>{name}</h2>
                 <h4>{lenguage}</h4>
                 <p>{description}</p>
@@ -45,11 +44,14 @@ const Wrapper = styled.div`
     background-color: g;
     position: relative;
     background-color: #1b1b1b;
+    min-height: 400px;
 }
 
 .project-img{
   width: 100%;
   border-radius: 20px;
+  height: 50%;
+  object-fit: cover;
 }
 
 .working-project{
@@ -62,7 +64,6 @@ const Wrapper = styled.div`
   color: red;
   padding: 3px;
   border-radius: 50px;
-
 }
 
 

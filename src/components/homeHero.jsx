@@ -28,8 +28,15 @@ const HomeHero = () => {
 
 
 const Wrapper = styled.section`
+
+
 .hero-back{
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 85vh;
 }
 
 .hero-back::before{
@@ -191,6 +198,7 @@ const Wrapper = styled.section`
   .hero-container{
     flex-direction: column;
     width: 100%;
+    
   }
 
   .hero-name{
