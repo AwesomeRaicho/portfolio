@@ -41,7 +41,7 @@ const Wrapper = styled.section`
 .section-title{
   color: white;
   text-align: center;
-  font-size: 45px;
+  font-size: 43px;
 }
 .projects-container{
   display: flex;

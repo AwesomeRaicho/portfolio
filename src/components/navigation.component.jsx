@@ -45,13 +45,13 @@ const Wrapper = styled.section`
     align-items: center;
     margin: auto;
     border-bottom: solid gray 1px;
-    box-shadow: 0px 4px 8px gray;
+    box-shadow: 0px 2px 4px gray;
     background-color: rgb(37, 37, 37);
     margin: 0%;
     padding: 0%;
     height: 7vh;
     min-height: 45px;
-
+    z-index: 5;
 }
 
 .nav-list{
@@ -63,6 +63,7 @@ const Wrapper = styled.section`
     margin-top: 0%;
     margin-bottom: 0%;
     padding: 0%;
+    z-index: 5;
 }
 
 .logo{

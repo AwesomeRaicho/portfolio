@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, } from 'react';
 import Projects from '../project-data';
 import { useParams } from 'react-router-dom';
 
@@ -12,9 +12,8 @@ const SingleProject = () => {
   const project = Projects.filter((project)=> {
     return project.id === Number(projectId);
   })
-  console.log(project)
-  const {description, featured, id, imgs} = project[0];
-
+  const { imgs} = project[0];
+// description, featured, id,
 
   const [mainImage, setMainImage] = useState(imgs[0]);
 
@@ -22,19 +21,18 @@ const SingleProject = () => {
     setMainImage(imgs[imgIndex])
   }
 
-console.log(mainImage)
   return (
     <Wrapper>
       <div className="single-project-container">
         <div className="images-container">
           <div className='main-image-container'>
-            <img src={`${mainImage}`} alt='project image' className='main-image'/>
+            <img src={`${mainImage}`} alt='project' className='main-image'/>
           </div>
           <div className='images-previews'>
             {imgs.map((image, index)=>{
               return (
                 <span className='image-preview-container' key={index}>
-                  <img src={`${image}`} alt="image preview"  onClick={()=>{changeMain(index)}} className={`${mainImage === imgs[index]? 'image-preview active': 'image-preview'}`}/>
+                  <img src={`${image}`} alt={`preview-${index}`}  onClick={()=>{changeMain(index)}} className={`${mainImage === imgs[index]? 'image-preview active': 'image-preview'}`}/>
                 </span>
               )
             })}

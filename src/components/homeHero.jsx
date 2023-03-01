@@ -1,55 +1,72 @@
-import React from 'react'
+import React,{useRef, useEffect} from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
-
+// This is the actual Hero you are looking at ;)
 const HomeHero = () => {
+  const background = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.pageYOffset;
+      background.current.style.backgroundPositionY = offset * +0.5 + 'px';
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
     <Wrapper>
-      <div className='hero-back'>
+      <div className='hero-back' >
+        <div className="hero-back-filter"ref={background}></div>
         <div className="hero-container">
             <div className='hero-info'>
+            <p className='hero-message1'><span className='obi-wan'>Hello there</span>, my name is</p>
                 <h1 className='hero-name'>Ricardo Araujo</h1>
-                <p className='hero-message'>Hello there, I am a web developer.</p>
+                <p className='hero-message'>and I'm a web developer.</p>
                 <div className='hero-btns'>
-                  <button className='hero-btn'>Portfolio</button><button className='hero-btn'>About Me</button>
+                  <Link to={'/'}><button className='hero-btn'>Portfolio</button></Link> 
+                  <Link to={'/about'}><button className='hero-btn'>About Me</button></Link>
                 </div>
-            </div>
-            <div className='hero-images'>
-              <div className='portrait-container'>
-                <img className='hero-portrait' src="/images/placeholder.jpg" alt="ricardo araujo" />
-              </div>
             </div>
         </div>
       </div>
     </Wrapper>
     
-  )
-}
-
+    )
+  }
+  export default HomeHero;
+  
 
 const Wrapper = styled.section`
-
+.obi-wan{
+  color: #d30000;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px black;
+}
 
 .hero-back{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90vh;
   
-  height: 85vh;
 }
 
-.hero-back::before{
-  content: '';
+.hero-back-filter{
   position: absolute;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
-  opacity: .35;
-  background-image: url('/images/hero-wallpaper.jpg');
-  z-index: -2;
-  background-position: center;
+  opacity: .25;
+  background-image: url('/images/background4thWall.PNG');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+
 }
 
 .hero-container{
@@ -57,14 +74,15 @@ const Wrapper = styled.section`
   height: 70vh;
   align-items: center;
   justify-content: center;
+  width: 100%;
   max-width: 1200px;
   margin: auto;
+  z-index: 2;
 }
 
 .hero-info{
   margin-right: auto;
-  margin-left: 50px;
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -73,12 +91,21 @@ const Wrapper = styled.section`
 
 .hero-name{
   margin: 0%;
-  font-size: 70px;
+  font-size: 100px;
   color: white;
   font-family: 'Quicksand', sans-serif;
   text-align: center;
   width: 100%;
-  margin-bottom: 30px;
+}
+
+.hero-message1{
+  text-align: center;
+  margin: 0px;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: -10px;
 }
 
 .hero-message{
@@ -87,11 +114,14 @@ const Wrapper = styled.section`
   color: white;
   font-family: 'Quicksand', sans-serif;
   font-weight: 200;
+  font-size: 30px;
+  
+  margin-bottom: 30px;
 }
 
 .hero-btns{
   text-align: center;
-
+  text-decoration: none;
 }
 
 
@@ -100,12 +130,13 @@ const Wrapper = styled.section`
   background: transparent;
   margin: 15px;
   padding: 10px;
-  background-color: #d7b700;
+  background-color: #e4d100;
   border-radius: 50px;
   color: white;
   font-weight: 700;
   text-shadow: 0px 0px 8px gray;
-  width: 100px;
+  width: 120px;
+  font-size: 20px;
 }
 
 
@@ -163,19 +194,33 @@ const Wrapper = styled.section`
 
 
 @media screen and (max-width: 950px){ //////////////// 950px
+  .hero-back-filter{
+
+  background-position: left;
+
+}
+  
   .hero-name{
   margin: 0%;
   font-size: 60px;
-  color: white;
   padding-left: 0%;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
+  margin-bottom: 15px;
+}
+
+.hero-message1{
+  padding-left: 0%;
+  margin: 0px;
+  text-align: center;
+  font-size: 20px;
 }
 
 .hero-message{
   padding-left: 0%;
   margin: 0px;
   text-align: center;
+  font-size: 20px;
 }
 
 .hero-btns{
@@ -223,12 +268,10 @@ const Wrapper = styled.section`
   }
 
   .hero-btns{
-    margin-top: 30px;
+    //margin-top: 30px;
   }
 }
 `
 
 
 
-
-export default HomeHero;
