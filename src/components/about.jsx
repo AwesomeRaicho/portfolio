@@ -67,9 +67,10 @@ const Wrapper = styled.div`
   margin-bottom: 0%;
 }
 .aboutme-section{
-  height: 80vh;
   display: flex;
   flex-direction: column;
+  
+  height: auto;
 }
 
 .aboutme-content{

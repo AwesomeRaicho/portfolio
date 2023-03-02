@@ -35,18 +35,18 @@ const Wrapper = styled.section`
 .section-center{
   max-width: 1200px;
   margin: auto;
+  min-height: 600px;
 }
 
 .section-title{
   color: white;
   text-align: center;
-  font-size: 43px;
+  font-size: 50px;
 }
 .projects-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 `
