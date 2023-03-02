@@ -35,7 +35,6 @@ const Wrapper = styled.section`
 .section-center{
   max-width: 1200px;
   margin: auto;
-  position: relative;
 }
 
 .section-title{
@@ -47,7 +46,6 @@ const Wrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: stretch;
 
 }
 
