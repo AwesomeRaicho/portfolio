@@ -27,7 +27,6 @@ const HomeHero = () => {
                 <p className='hero-message'>and I'm a web developer.</p>
                 <div className='hero-btns'>
                   <Link to={'/'}><button className='hero-btn'>Portfolio</button></Link> 
-                  <Link to={'/about'}><button className='hero-btn'>About Me</button></Link>
                 </div>
             </div>
         </div>
@@ -122,6 +121,7 @@ const Wrapper = styled.section`
 .hero-btns{
   text-align: center;
   text-decoration: none;
+  margin-top: 25px;
 }
 
 
@@ -130,13 +130,14 @@ const Wrapper = styled.section`
   background: transparent;
   margin: 15px;
   padding: 10px;
-  background-color: #e4d100;
-  border-radius: 50px;
+  background-color: #e4d10089;
+  border-radius: 5px;
   color: white;
   font-weight: 700;
   text-shadow: 0px 0px 8px gray;
   width: 120px;
   font-size: 20px;
+  border: solid 3px #e4d100;
 }
 
 

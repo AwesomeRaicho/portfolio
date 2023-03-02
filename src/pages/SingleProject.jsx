@@ -12,8 +12,8 @@ const SingleProject = () => {
   const project = Projects.filter((project)=> {
     return project.id === Number(projectId);
   })
-  const { imgs} = project[0];
-// description, featured, id,
+  const {framework, description,lenguage, name, imgs} = project[0];
+
 
   const [mainImage, setMainImage] = useState(imgs[0]);
 
@@ -26,19 +26,25 @@ const SingleProject = () => {
       <div className="single-project-container">
         <div className="images-container">
           <div className='main-image-container'>
-            <img src={`${mainImage}`} alt='project' className='main-image'/>
+            <img src={`${mainImage}`} alt='project' className={`${mainImage === imgs[4]?  'main-image main-image-mobile': 'main-image'}`}/>
           </div>
           <div className='images-previews'>
             {imgs.map((image, index)=>{
               return (
                 <span className='image-preview-container' key={index}>
+
                   <img src={`${image}`} alt={`preview-${index}`}  onClick={()=>{changeMain(index)}} className={`${mainImage === imgs[index]? 'image-preview active': 'image-preview'}`}/>
                 </span>
               )
             })}
           </div>
         </div>
-        <div className='project-information'>SingleProject, information</div>
+        <div className='project-information'>
+          <h1>{name}</h1>
+          <h3>{lenguage}</h3>
+          <h3>{framework}</h3>
+          <p>{description}</p>
+        </div>
       </div>
     </Wrapper>
   )
@@ -48,11 +54,21 @@ export default SingleProject;
 
 const Wrapper = styled.div`
 .single-project-container{
-  border: solid 1px white;
   max-width: 1200px;
   margin: auto;
   display: flex;
+  padding-top: 50px;
+  justify-content: center;
 }
+
+.project-information{
+  color: white;
+  width: 50%;
+}
+
+
+
+// images
 
 .images-container{
   width: 50%;
@@ -67,6 +83,10 @@ const Wrapper = styled.div`
 .main-image{
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.main-image-mobile{
   object-fit: scale-down;
 }
 
@@ -87,9 +107,10 @@ const Wrapper = styled.div`
 .image-preview{
   width: 100%;
   height: 100%;
-  object-fit: scale-down;
+  object-fit: cover;
   box-sizing: border-box;
   padding: 5px;
+  position: absolute;
 }
 .active{
   border: solid 2px #6363ff;
@@ -97,5 +118,48 @@ const Wrapper = styled.div`
   box-sizing: border-box;
 }
 
+@media screen and (max-width: 950px){ //////////////// 950px
 
+  .single-project-container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding-top: 50px;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.images-container{
+  width: 80%;
+  padding: 20px;
+}
+.project-information{
+  color: white;
+  width: 80%;
+}
+}
+
+
+@media screen and (max-width: 500px){ //////////////// 950px
+
+.single-project-container{
+max-width: 1200px;
+margin: auto;
+display: flex;
+padding-top: 50px;
+
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.images-container{
+width: 90%;
+padding: 0px;
+}
+.project-information{
+color: white;
+width: 90%;
+}
+}
 `

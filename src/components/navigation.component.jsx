@@ -19,9 +19,6 @@ const Navigation = () => {
                     <li className='nav-item'>
                         <Link className='nav-link' to={'/'}>Home</Link>
                     </li>
-                    <li className='nav-item'>
-                        <Link className='nav-link' to={'/about'}>About</Link>
-                    </li>
                 </ul>
 
                 <button type='button' className='nav-toggler' onClick={()=>setToggled(!toggled)}>{toggled ? <FaRegTimesCircle size='30px' color='white'/>:<FaBars size='30px' color='white'/>}</button>

@@ -2,8 +2,8 @@ import Navigation from './components/navigation.component';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/home';
-import About from './pages/about';
 import SingleProject from './pages/SingleProject';
+import Error404 from './pages/Error404';
 
 import './App.css';
 
@@ -15,8 +15,9 @@ function App() {
       
       <Routes>
         <Route index path='/' element={<Home />}/>
-        <Route index path='/about' element={<About />}/>
         <Route index path='/projects/:projectId' element={<SingleProject />}/>
+        <Route index path='/*' element={<Error404 />}/>
+
       </Routes>
       </BrowserRouter>
     </div>

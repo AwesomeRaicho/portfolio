@@ -2,9 +2,14 @@ const Projects = [
     {
         name: 'Japanese Memory Game',
         lenguage: 'JavaScript',
+        framework: 'React',
         wip: true,
         description: 'Collection of hiragana and katakana memory games',
-        imgs: ['/images/memory-game.PNG'],
+        imgs: ['/images/memory-game/memory-game.PNG',
+        '/images/memory-game/memory-game1.PNG',
+        '/images/memory-game/memory-game2.PNG',
+        '/images/memory-game/memory-game3.PNG',
+        '/images/memory-game/memory-game4.PNG'],
         url: 'https://hiragana-katakana-games.netlify.app/',
         featured: true,
         id: 1
@@ -12,6 +17,7 @@ const Projects = [
     {
         name: 'Pokemon API App',
         lenguage: 'JavaScript',
+        framework: 'React',
         wip: true,
         description: 'General pokemon information',
         imgs: [
