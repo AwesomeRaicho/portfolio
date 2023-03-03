@@ -1,8 +1,23 @@
+import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
+
+const icons = {
+    html: {name: 'HTML', image:<SiHtml5 color="#FF5733"/>},
+    css: {name: 'CSS', image:<SiCss3 color="#264de4"/>},
+    javascript: {name: 'JS', image:<SiJavascript color="#FFFF00" />},
+    react: {name: 'React', image:<SiReact color="#61DBFB"/> }
+}
+
 const Projects = [
     {
         name: 'Japanese Memory Game',
         lenguage: 'JavaScript',
         framework: 'React',
+        icons: [
+            icons.html,
+            icons.css,
+            icons.javascript,
+            icons.react
+        ],
         wip: true,
         description: 'Collection of hiragana and katakana memory games',
         imgs: ['/images/memory-game/memory-game.PNG',
@@ -11,6 +26,7 @@ const Projects = [
         '/images/memory-game/memory-game3.PNG',
         '/images/memory-game/memory-game4.PNG'],
         url: 'https://hiragana-katakana-games.netlify.app/',
+        github: 'https://github.com/AwesomeRaicho/hiragana-katakana-games',
         featured: true,
         id: 1
     },
@@ -18,6 +34,12 @@ const Projects = [
         name: 'Pokemon API App',
         lenguage: 'JavaScript',
         framework: 'React',
+        icons: [
+            icons.html,
+            icons.css,
+            icons.javascript,
+            icons.react
+        ],
         wip: true,
         description: 'General pokemon information',
         imgs: [
@@ -28,6 +50,7 @@ const Projects = [
             '/images/pokemon/pokemon4.PNG',
         ],
         url: 'https://awesomeraicho-pokemon-app.netlify.app/',
+        github: 'https://github.com/AwesomeRaicho/pokemonAPI',
         featured: true,
         id: 2
     },

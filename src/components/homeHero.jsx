@@ -26,7 +26,7 @@ const HomeHero = () => {
                 <h1 className='hero-name'>Ricardo Araujo</h1>
                 <p className='hero-message'>and I'm a web developer.</p>
                 <div className='hero-btns'>
-                  <Link to={'/'}><button className='hero-btn'>Portfolio</button></Link> 
+                  <Link to={'/projects'} className='hero-btn link'>Projects</Link> 
                 </div>
             </div>
         </div>
@@ -38,7 +38,12 @@ const HomeHero = () => {
   export default HomeHero;
   
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
+
+.link{
+  text-decoration: none;
+}
+
 .obi-wan{
   color: #d30000;
   font-weight: 900;
@@ -51,7 +56,7 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   height: 90vh;
-  
+  min-height: 600px;
 }
 
 .hero-back-filter{
@@ -70,7 +75,6 @@ const Wrapper = styled.section`
 
 .hero-container{
   display: flex;
-  height: 70vh;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -129,15 +133,16 @@ const Wrapper = styled.section`
   border: transparent;
   background: transparent;
   margin: 15px;
-  padding: 10px;
-  background-color: #e4d10089;
-  border-radius: 5px;
+  padding: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #e4d10086;
+  border-radius: 30px;
   color: white;
-  font-weight: 700;
   text-shadow: 0px 0px 8px gray;
-  width: 120px;
-  font-size: 20px;
+  font-size: 25px;
   border: solid 3px #e4d100;
+  text-shadow: 0px 0px 4px gray;
 }
 
 
@@ -227,15 +232,11 @@ const Wrapper = styled.section`
 .hero-btns{
   text-align: center;
 }
-.hero-portrait{
-  width: 200px;
-  height: 200px;
-  border: 10px solid white;
-  border-radius: 10px;
-  object-fit: cover;
-  box-shadow: 4px 4px 8px black;
-  z-index: 1;
+.hero-btn{
+  padding-top: 5px;
+  font-size: 20px;
 }
+
 
 
 }

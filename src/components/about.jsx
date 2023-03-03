@@ -116,9 +116,12 @@ const Wrapper = styled.div`
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 .active{
-  background-color: #2f9fa5;
+  background-color: #24787c;
+  border: solid 2px white;
 }
 
 .btn-containers{
@@ -154,14 +157,17 @@ const Wrapper = styled.div`
   flex-direction: column;
 }
 .information{
-  width: 80%;
-  max-width: 600px;
+  width: 100%;
+  padding: 0%;
+  margin: 0%;
 }
 .images{
   width: 90%;
   max-width: 600px;
   position: relative;
 }
+
+
 
 }
 

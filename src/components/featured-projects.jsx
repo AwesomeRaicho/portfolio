@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ProjectLink from '../components/project-link';
 import Projects from '../project-data';
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,15 +16,17 @@ const FeaturedProjects = () => {
 
   return (
     <Wrapper>
-      <div className="section-center">
+      <section className="section-center">
         <h2 className='section-title'>Featured Projects</h2>
         <div className="projects-container">
           {featuredProjects.map((project)=>{
             return <ProjectLink key={project.id} {...project} className='project-link'/>
           })}
         </div>
-
-      </div>
+        <div className='btns-container'>
+          <Link to={'/projects'} className='link btn'>All Projects</Link>  
+        </div>
+      </section>
     </Wrapper>
   )
 }
@@ -47,6 +50,10 @@ const Wrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.btns-container{
+  margin-top: 20px;
 }
 
 `

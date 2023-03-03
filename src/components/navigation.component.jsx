@@ -17,10 +17,12 @@ const Navigation = () => {
 
                 <ul className={`nav-list ${toggled && 'display'}`}>
                     <li className='nav-item'>
-                        <Link className='nav-link' to={'/'}>Home</Link>
+                        <Link className='nav-link' to={'/'} onClick={()=>setToggled(!toggled)}>Home</Link>
+                    </li>
+                    <li className='nav-item'>
+                        <Link className='nav-link' to={'/projects'} onClick={()=>setToggled(!toggled)}>Projects</Link>
                     </li>
                 </ul>
-
                 <button type='button' className='nav-toggler' onClick={()=>setToggled(!toggled)}>{toggled ? <FaRegTimesCircle size='30px' color='white'/>:<FaBars size='30px' color='white'/>}</button>
             </nav>
         </div>

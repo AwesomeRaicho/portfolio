@@ -12,43 +12,34 @@ body{
 }
 
 
-/* ===== PAGES ===== */
 
 
-
-
-/* ====== PROJECT LINKS ====== */
-
-/* .link{
-  text-decoration: none;
-  margin-top: 30px;
-  margin-left: 30px;
-}
-.project-container{
-  border: solid 1px gray;
-  box-shadow: 4px 4px 8px gray;
-  border-radius: 20px;
-  width: 300px;
-  padding: 10px;
-  background-color: white;
-  height: 100%;
-  position: relative;
-}
-
-.project-img{
-  width: 100%;
-}
-
-.working-project{
+/* BUTTONS */
+.btns-container{
+  margin-top: auto;
   display: flex;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
   justify-content: center;
-  padding-bottom: 5px;
+}
+
+.link{
+  text-decoration: none;
+}
+
+.btn{
+  
+  border: transparent;
+  background: transparent;
+  margin: 15px;
+  background-color: #e4d100;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0px 0px 8px gray;
+  width: 120px;
   font-size: 20px;
-  font-weight: 700;
-  color: red;
-} */
-
-
+  border: solid 3px #e4d100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0%;
+}
+/* BUTTONS END*/
