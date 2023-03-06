@@ -9,7 +9,6 @@ const AboutMe = () => {
     const [pic, setPic] = useState(0)
   
     const handleClick = (num) => {
-        console.log('clicked')
       setPic(num);
     }
     const slideButton = (num) => {
@@ -28,7 +27,7 @@ const AboutMe = () => {
 
   return (
 <Wrapper>
-        <h1 className='text-6xl text-center my-16'>About Me</h1>
+        <h2 className=' my-10 text-4xl text-center text-white pt-10 lg:text-6xl lg:my-16'>About Me</h2>
 
         <div className='container flex flex-col overflow-hidden lg:flex-row m-auto rounded-xl lg:my-20'>
             {/* // first column  */}
@@ -37,7 +36,7 @@ const AboutMe = () => {
                     <button type='button'><AiOutlineArrowLeft size={'35px'} color='white' className='mx-6 mt-2' onClick={()=>slideButton(pic-1)}/></button>
                     <button type='button'><AiOutlineArrowRight size={'35px'} color='white' className='mx-6 mt-2' onClick={()=>slideButton(pic+1)}/></button>
                 </div>
-                <div className={`passions py-6 ${pic === 0 ? 'transform1': pic === 1 ? 'transform2': pic === 2? 'transform3': null} duration-200 `}>
+                <div className={`passions pt-14 ${pic === 0 ? 'transform1': pic === 1 ? 'transform2': pic === 2? 'transform3': null} duration-200 `}>
                         <div className='passion' onClick={()=>{handleClick(0)}}>
                             <h2 className='text-2xl m-5 text-center '>Software Development</h2>
                             <p className='p-2 text-base select-none'>I love programming and tackling tough problems. I strive for efficient and effective solutions that meet unique needs. I'm always expanding my knowledge to stay current with technology and delivering high-quality work to grow as a developer..</p>
@@ -63,8 +62,8 @@ const AboutMe = () => {
             
 
             {/* // second column */}
-                <div className='w-full lg:w-1/2 flex justify-center items-center bg-gray-50'>
-                    <img src={aboutMePics[pic]} alt="ricardo araujo" className='h-96 object-scale-down m-10'/>
+                <div className='w-full lg:w-1/2 flex justify-center lg:items-center bg-gray-50'>
+                    <img src={aboutMePics[pic]} alt="ricardo araujo" className='h-96 object-scale-down lg:m-10'/>
                 </div>
 
         </div>

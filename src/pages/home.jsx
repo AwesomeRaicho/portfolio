@@ -2,6 +2,7 @@ import React from 'react';
 import HomeHero from '../components/homeHero'
 import FeaturedProjects from '../components/featured-projects';
 import AboutMe from '../components/AboutMe';
+import TechnicalSkills from '../components/TechnicalSkills';
 //import { useGlobalContext } from '../context';
 
 const Home = () => {
@@ -10,9 +11,10 @@ const Home = () => {
 
   return (
     <div className='home-container'>
-      <HomeHero/>
+      <HomeHero />
+      <TechnicalSkills />
       <AboutMe />
-      <FeaturedProjects/>
+      <FeaturedProjects />
     </div>
   )
 };

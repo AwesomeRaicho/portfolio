@@ -1,10 +1,14 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
+import {FaBootstrap} from "react-icons/fa";
 
-const icons = {
+
+export const icons = {
     html: {name: 'HTML', image:<SiHtml5 className="text-5xl" color="#FF5733"/>},
     css: {name: 'CSS', image:<SiCss3 className="text-5xl" color="#264de4"/>},
     javascript: {name: 'JS', image:<SiJavascript className="text-5xl" color="#FFFF00" />},
-    react: {name: 'React', image:<SiReact className="text-5xl" color="#61DBFB"/> }
+    react: {name: 'React', image:<SiReact className="text-5xl" color="#61DBFB"/> },
+    tailwind: {name: 'Tailwind', image: <SiTailwindcss className="text-5xl" color="#38bdf8"/>},
+    bootstrap: {name: 'Bootstrap', image: <FaBootstrap className="text-5xl" color="#6f42c1"/>}
 }
 
 const Projects = [
