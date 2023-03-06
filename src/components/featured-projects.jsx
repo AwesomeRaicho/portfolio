@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
   return (
     <Wrapper>
       <section className="section-center">
-        <h2 className='section-title'>Featured Projects</h2>
+        <h2 className='section-title text-6xl m-10'>Featured Projects</h2>
         <div className="projects-container">
           {featuredProjects.map((project)=>{
             return <ProjectLink key={project.id} {...project} className='project-link'/>
@@ -42,9 +42,7 @@ const Wrapper = styled.section`
 }
 
 .section-title{
-  color: white;
   text-align: center;
-  font-size: 50px;
 }
 .projects-container{
   display: flex;

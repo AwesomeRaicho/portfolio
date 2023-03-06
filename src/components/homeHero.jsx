@@ -47,7 +47,6 @@ const Wrapper = styled.div`
 .obi-wan{
   color: #d30000;
   font-weight: 900;
-  text-shadow: 0px 0px 5px black;
 }
 
 .hero-back{
@@ -57,6 +56,7 @@ const Wrapper = styled.div`
   align-items: center;
   height: 90vh;
   min-height: 600px;
+  background-color: black;
 }
 
 .hero-back-filter{
