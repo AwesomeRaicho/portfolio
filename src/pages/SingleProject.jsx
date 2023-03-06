@@ -2,7 +2,6 @@ import React, {useState, } from 'react';
 import Projects from '../project-data';
 import { useParams,Link } from 'react-router-dom';
 
-import styled from 'styled-components';
 import { GoEye } from "react-icons/go";
 import {SiGithub} from "react-icons/si";
 
@@ -33,7 +32,7 @@ const SingleProject = () => {
         <div className='p-4 border border-gray-400 flex flex-col gap-4'>
 
           <div className='flex justify-center h-96   '>
-            <img src={mainImage} alt="main-image" className='w-full max-h-96 object-scale-down' />
+            <img src={mainImage} alt="preview" className='w-full max-h-96 object-scale-down' />
           </div>
 
 
@@ -42,7 +41,7 @@ const SingleProject = () => {
 
           <div className='flex gap-3 h-24' >
             {imgs.map((image,index)=>{
-              return <img src={image} key={index} alt={`image-preview-${index}`} onClick={()=>{changeMain(index)}} className={` w-1/6 object-cover p-1 flex-1 ${mainImage === imgs[index] && 'border'}`}/>
+              return <img src={image} key={index} alt={`preview-${index}`} onClick={()=>{changeMain(index)}} className={` w-1/6 object-cover p-1 flex-1 ${mainImage === imgs[index] && 'border'}`}/>
             })}
           </div>
           
