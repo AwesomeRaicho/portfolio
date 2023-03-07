@@ -5,6 +5,7 @@ import Home from './pages/home';
 import ProgectsPage from './pages/ProgectsPage';
 import SingleProject from './pages/SingleProject';
 import Error404 from './pages/Error404';
+import Footer from './components/Footer';
 
 import './App.css';
 
@@ -19,8 +20,9 @@ function App() {
         <Route index path='/projects' element={<ProgectsPage />}/>
         <Route index path='/projects/:projectId' element={<SingleProject />}/>
         <Route index path='/*' element={<Error404 />}/>
-
       </Routes>
+      
+      <Footer />
       </BrowserRouter>
     </div>
   );

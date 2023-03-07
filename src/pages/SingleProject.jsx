@@ -26,9 +26,12 @@ const SingleProject = () => {
 
   return (
     <section className='back'>
-      <div className='container mx-auto grid  lg:grid-cols-2 pt-12'>
+              <div className='container mx-auto  pt-6 flex align-center'>
+                <Link to={'/projects'} className='link btn'>All Projects</Link>  
+              </div>
+      <div className='container mx-auto grid lg:grid-cols-2 border-2 border-gray-400'>
 
-        <div className='p-4 border border-gray-400 flex flex-col gap-4'>
+        <div className='p-4  flex flex-col gap-4'>
 
           <div className='flex justify-center h-96   '>
             <img src={mainImage} alt="preview" className='w-full max-h-96 object-scale-down' />

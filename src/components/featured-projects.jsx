@@ -17,7 +17,7 @@ const FeaturedProjects = () => {
   return (
     <Wrapper>
       <section className="section-center">
-        <h2 className='my-10 text-4xl text-center text-white pt-10 lg:text-6xl lg:my-16'>Featured Projects</h2>
+        <h2 className='my-10 text-4xl font-bold text-center pt-10 lg:text-6xl lg:my-16'>Featured Projects</h2>
         <div className="projects-container">
           {featuredProjects.map((project)=>{
             return <ProjectLink key={project.id} {...project} className='project-link'/>
@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
 
 
 const Wrapper = styled.section`
-
+margin-bottom: 50px;
 .section-center{
   max-width: 1200px;
   margin: auto;

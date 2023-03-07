@@ -112,7 +112,7 @@ const Wrapper = styled.section`
 
 .nav-toggler{
   border: none;
-  background-color: rgb(37, 37, 37);
+  background-color: #252525;
   display: inline;
   margin-left: auto;
   margin-right: 20px;

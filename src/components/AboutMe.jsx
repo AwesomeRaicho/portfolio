@@ -27,7 +27,7 @@ const AboutMe = () => {
 
   return (
 <Wrapper>
-        <h2 className=' my-10 text-4xl text-center text-white pt-10 lg:text-6xl lg:my-16'>About Me</h2>
+        <h2 className=' my-10 text-4xl text-center font-bold pt-10 lg:text-6xl lg:my-16'>About Me</h2>
 
         <div className='container flex flex-col overflow-hidden lg:flex-row m-auto rounded-xl lg:my-20'>
             {/* // first column  */}

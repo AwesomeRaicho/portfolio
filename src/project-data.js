@@ -1,6 +1,5 @@
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss } from "react-icons/si";
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiTailwindcss, SiGmail, SiGithub, SiLinkedin } from "react-icons/si";
 import {FaBootstrap} from "react-icons/fa";
-
 
 export const icons = {
     html: {name: 'HTML', image:<SiHtml5 className="text-5xl" color="#FF5733"/>},
@@ -10,6 +9,24 @@ export const icons = {
     tailwind: {name: 'Tailwind', image: <SiTailwindcss className="text-5xl" color="#38bdf8"/>},
     bootstrap: {name: 'Bootstrap', image: <FaBootstrap className="text-5xl" color="#6f42c1"/>}
 }
+
+export const contacts = [
+    {
+        to: 'gmail', 
+        image: <SiGmail className="text-2xl" color="black"/>,
+        link: 'ricardo.dev0188@gmail.com'
+    },
+    {
+        to: 'github', 
+        image: <SiGithub className="text-2xl" color="black"/>, 
+        link: 'https://github.com/AwesomeRaicho'
+    },
+    {
+        to: 'linkedin', 
+        image: <SiLinkedin className="text-2xl" color="black"/>, 
+        link: 'https://www.linkedin.com/in/pedro-ricardo-araujo-fuentes-57ab82268/'
+    }
+]
 
 const Projects = [
     {

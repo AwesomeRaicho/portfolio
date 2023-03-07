@@ -1,5 +1,4 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import ProjectLink from '../components/project-link';
 import Projects from '../project-data';
@@ -9,6 +8,7 @@ const ProgectsPage = () => {
     <Wrapper>
         <div className='projects-page-container'>
             <h1 className='title'>Projects</h1>
+
             <div className='projects-container'>
                 {Projects.map((project)=>{
                     return <ProjectLink key={project.id} {...project}/>
