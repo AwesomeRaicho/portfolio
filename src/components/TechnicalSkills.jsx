@@ -19,9 +19,9 @@ const TechnicalSkills = () => {
     <Wrapper>
         <div className='bg-blue-800  pb-10'>
             <h1 className='text-4xl text-center font-bold text-white pt-10 lg:text-6xl'>Technical Skills</h1>
-            <div className='flex flex-wrap justify-center items-center 0  mt-12'>
+            <div className='flex flex-wrap justify-center items-center mt-12'>
                 {iconArray.map((tech, index)=>{
-                    return <span className=' bg-gray-800 m-2 p-4 rounded-full' key={index}>{tech.image}</span>
+                    return <span className=' bg-gray-800 m-2 p-4 rounded-full size' key={index}>{tech.image}</span>
                 })}
             </div>
         </div>
@@ -34,7 +34,18 @@ export default TechnicalSkills;
 
 const Wrapper = styled.section`
 
+img{
 
+}
+
+
+.size{
+    max-width: 80px;
+    max-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 `; 

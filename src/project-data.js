@@ -7,7 +7,10 @@ export const icons = {
     javascript: {name: 'JS', image:<SiJavascript className="text-5xl" color="#FFFF00" />},
     react: {name: 'React', image:<SiReact className="text-5xl" color="#61DBFB"/> },
     tailwind: {name: 'Tailwind', image: <SiTailwindcss className="text-5xl" color="#38bdf8"/>},
-    bootstrap: {name: 'Bootstrap', image: <FaBootstrap className="text-5xl" color="#6f42c1"/>}
+    bootstrap: {name: 'Bootstrap', image: <FaBootstrap className="text-5xl" color="#6f42c1"/>},
+    Csharp: {name: "C#", image: <img src="/images/c-sharp.png" alt="C#"/>},
+    dotnet: {name: "dotnet", image: <img src="/images/dotnet.png" alt="dotnet" />},
+
 }
 
 export const contacts = [

@@ -17,9 +17,9 @@ function App() {
       
       <Routes>
         <Route index path='/' element={<Home />}/>
-        <Route index path='/projects' element={<ProgectsPage />}/>
-        <Route index path='/projects/:projectId' element={<SingleProject />}/>
-        <Route index path='/*' element={<Error404 />}/>
+        <Route  path='/projects' element={<ProgectsPage />}/>
+        <Route  path='/projects/:projectId' element={<SingleProject />}/>
+        <Route  path='/*' element={<Error404 />}/>
       </Routes>
       
       <Footer />
