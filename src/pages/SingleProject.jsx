@@ -43,7 +43,7 @@ const SingleProject = () => {
 
           <div className='flex gap-3 h-24' >
             {imgs.map((image,index)=>{
-              return <img src={image} key={index} alt={`preview-${index}`} onClick={()=>{changeMain(index)}} className={` w-1/6 object-cover p-1 flex-1 ${mainImage === imgs[index] && 'border'}`}/>
+              return <img src={image} key={index} alt={`preview-${index}`} onClick={()=>{changeMain(index)}} className={` w-1/6 object-cover p-1 flex-1 ${mainImage === imgs[index] && 'border1'}`}/>
             })}
           </div>
           
@@ -69,7 +69,6 @@ const SingleProject = () => {
     </section>
   )
 }
-
 
 
 export default SingleProject;

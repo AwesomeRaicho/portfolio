@@ -8,8 +8,8 @@ export const icons = {
     react: {name: 'React', image:<SiReact className="text-5xl" color="#61DBFB"/> },
     tailwind: {name: 'Tailwind', image: <SiTailwindcss className="text-5xl" color="#38bdf8"/>},
     bootstrap: {name: 'Bootstrap', image: <FaBootstrap className="text-5xl" color="#6f42c1"/>},
-    Csharp: {name: "C#", image: <img src="/images/c-sharp.png" alt="C#"/>},
-    dotnet: {name: "dotnet", image: <img src="/images/dotnet.png" alt="dotnet" />},
+    Csharp: {name: "C#", image: <img src="/images/c-sharp.png" className="max-h-16" alt="C#"/>},
+    //dotnet: {name: "dotnet", image: <img src="/images/dotnet.png" alt="dotnet" />},
 
 }
 
@@ -77,6 +77,27 @@ const Projects = [
         github: 'https://github.com/AwesomeRaicho/pokemonAPI',
         featured: true,
         id: 2
+    },
+    {
+        name: 'Console Contact Manager',
+        lenguage: 'C#',
+        framework: '.NET',
+        icons: [
+            icons.Csharp,
+        ],
+        wip: false,
+        description: 'When running this application on your terminal, you are able to add a contact and also view all added contacts. The Session class provides the main menus that will be used as the user interface, the "ContactBuilder" class is used to create contacts for adding and editing the contacts, a "DB" class is used to simulate a data base where we can store created contacts as well as retrieve them for viewing.',
+        imgs: [
+            '/images/contact-manager/contact-manager1.PNG',
+            '/images/contact-manager/contact-manager2.PNG',
+            '/images/contact-manager/contact-manager3.PNG',
+            '/images/contact-manager/contact-manager4.PNG',
+            '/images/contact-manager/contact-manager5.PNG',
+        ],
+        url: 'https://github.com/AwesomeRaicho/contact-management',
+        github: 'https://github.com/AwesomeRaicho/contact-management',
+        featured: true,
+        id: 3
     },
 ]
 

@@ -7,7 +7,7 @@ const ProgectsPage = () => {
   return (
     <Wrapper>
         <div className='projects-page-container'>
-            <h1 className='title'>Projects</h1>
+            <h1 className='title '>Projects</h1>
 
             <div className='projects-container'>
                 {Projects.map((project)=>{
@@ -25,7 +25,7 @@ export default ProgectsPage;
 
 const Wrapper = styled.div`
 .title{
-    color: white;
+    color: #000000;
     text-align: center;
     font-size: 50px;
 }

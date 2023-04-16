@@ -12,7 +12,7 @@ const ProjectLink = (props) => {
             <div className='project-container'>
                 <img src={imgs[0]} alt={name} className='project-img'/>
                 <h2 className='text-2xl px-3'>{name}</h2>
-                <h4 className='italic px-3 my-1 text-gray-600'>{lenguage}</h4>
+                <h4 className='italic px-3 my-1 text-red-600 font-bold text-xl'>{lenguage}</h4>
                 <p className='px-3'>{`${description.substring(0, 100)}...`}</p>
                 <div className='working-project'>
                     {wip && <i >Work in progress</i>  }
